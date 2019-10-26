@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="MenuPage.css">
+    <title>WoRdIaDa MENU</title>
+</head>
+<body class="mainBody">
+<div class="toolBar">
+    <div class="toolbarContent">
+        <span class="logoutSpan" onclick="logoutHandle()">Logout</span>
+        <span class="userNameSpan"></span>
+        <span class="emptySpan"></span>
+        <span class="logoSpan">
+            <img src="/wordiada/images/smallLogo.jpg" class="image"/>
+        </span>
+    </div>
+</div>
+<div class="mainDiv">
+    <div class="dialogDiv">
+        <div class="dialogContent">
+            <div class="details">
+                <div class="gameName"></div>
+                <div class="key"></div>
+                <div class="creatorName"></div>
+                <div class="boardSize"></div>
+                <div class="moves"></div>
+                <div class="playerNumber"></div>
+                <div>Registered players:</div>
+                <div class="playersNames"></div>
+            </div>
+            <div class="board">
+
+            </div>
+        </div>
+        <div class="dialogButtons">
+            <div class="dialogButton" onclick="joinGameClicked()">Join game</div>
+        </div>
+    </div>
+    <div class="gamesDiv">
+        <div class="gamesActions">
+            <!--<span>Select config file:</span>-->
+            <!--<input id="configInput" type="file" name="conf" class="fileInput" accept=".xml"/>-->
+            <!--<span>Select dic file:</span>-->
+            <!--<input id="dicInput" type="file" name="dic" class="fileInput" accept=".txt"/>-->
+            <!--<button onclick="uploadTest()">Upload game</button>-->
+
+            <!--<form target="" action="../../menu" enctype="multipart/form-data" method="POST">-->
+            <form>
+                <span>Select config file:</span>
+                <input id="config" type="file" name="config" accept=".xml"/><br>
+                <span>Select dic file:</span>
+                <input id="dict" type="file" name="dict" accept=".txt"/><br>
+                <input type="button" id="upload" value="Upload game" />
+            </form>
+        </div>
+        <div id="loadOKPopup"  hidden="hidden">
+        </div>
+        <div id="loading"  hidden="hidden"></div>
+        <div id="previewPopup" class="previewPopup"  hidden="hidden"></div>
+        <table class="gamesTable">
+            <thead>
+            <th>Name</th>
+            <th>Creator</th>
+            <th>Size</th>
+            <th>Registered/Required</th>
+            <th>Dictionary</th>
+            <th>Letters</th>
+            <th>Preview</th>
+            <th>incognito</th>
+            <th>Join</th>
+            </thead>
+            <tbody class="tableBody">
+            </tbody>
+        </table>
+    </div>
+    <div class="usersDiv">
+        <table class="usersTable">
+            <thead>
+            <th>Users online:</th>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="MenuPageController.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" />
+</body>
+</html>

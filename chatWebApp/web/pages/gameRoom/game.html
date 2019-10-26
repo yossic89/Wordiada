@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="GameRoom.css">
+    <title>Game Room</title>
+    <style>
+
+        td, th {
+            border: 1.5px solid black;
+        }
+        table {
+            margin-top: -380px;
+            margin-left: 355px;
+            text-align: center;
+            vertical-align: top;
+            display: inline-block;
+            white-space: nowrap;
+            max-width: 600px;
+            max-height: 500px;
+            overflow: auto;
+        }
+
+        td{
+            height: 50px;
+            width: 100px;
+            margin-right: 30px;
+            margin-top: -15px;
+            padding: 5px;
+        }
+
+        tr{background-color:#f7e1b5;}
+
+
+    </style>
+</head>
+<body>
+<div class="toolBar">
+    <div class="toolbarContent">
+        <span class="leaveGame" onclick="logoutHandle()">Leave Game</span>
+        <span class="userNameSpan" id="userNameSpan"></span>
+        <span class="logoSpan">
+            <img src="/wordiada/images/logo.gif" class="image"/>
+        </span>
+    </div>
+    <div class="user">
+        <span class="currentPlayer" id="currentPlayer">Current player:</span>
+    </div>
+    <div class="gameFlow">
+        <span id="progress" class="progress"></span>
+    </div>
+</div>
+<div class="mainDiv">
+    <div class="winnerDialog">
+        <div class="closeEnd" onclick="removeDialog(event)">
+            <!-- <img class="closeEnd" src="close.JPG"/>-->
+        </div>
+        <div class="dialogContent">
+            <div class="endDetails">
+                <h2> Game Over !!</h2>
+                <div class="statusDiv">
+                    <span>Game finished status: </span>
+                    <span class="finishStatus"></span>
+                </div>
+                <div class="winnerDiv">
+                    <span>Winners : </span>
+                </div>
+                <div class="endScoreDiv">
+                    <span>Highest Score: </span>
+                    <span class="highestScore"></span>
+                </div>
+            </div>
+            <div class="completedBoard">
+                <div class="completedBoardBody">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="moveListDialog">
+        <div class="close" onclick="removeDialog(event)">
+            <!-- <img class="close" src="close.JPG"/>-->
+        </div>
+        <h2>Displaying Move List:</h2>
+        <div class="moveListBody">
+
+        </div>
+    </div>
+    <div class="mainDivBody">
+        <div class="gameProperties">
+            <div class="round">Round</div>
+            <div class="boardSize">boardSize</div>
+            <div class="goldFish">Gold fish</div>
+            <div class="winnerMethod">Winner method</div>
+            <div class="turn">Turn 0/0</div>
+            <div class="stock">0</div>
+        </div>
+        <div class="actions">
+            <div id="rollDiceDialog" title="Dice result:" hidden="hidden" style="font-size: x-large; text-align: center" ></div>
+            <div id="correctWord" title=" " hidden="hidden" style="font-size: x-large; text-align: center" ></div>
+            <div class="action" id="roolDice" onclick="rollDice()">Roll Dice</div>
+            <div class="action" id="flipCards" onclick="flipCardsClick()"> Flip Cards </div>
+            <div class="action" id="checkWord" onclick="checkWord()"> Check Word </div>
+        </div>
+        <div class="playersStat">
+            <div class="playersNames">
+                <a>Name:</a>
+                <div class="playersNamesCol"></div>
+            </div>
+            <div class="playersTypes">
+                <a>Type:</a>
+                <div class="playersTypesCol"></div>
+            </div>
+            <div class="playersWords">
+                <a>Words:</a>
+                <div class="playersWordsCol"></div>
+            </div>
+            <div class="playersScore">
+                <a>Score:</a>
+                <div class="playersScoreCol"></div>
+            </div>
+        </div>
+        <div class="currentPlayerStat">
+            <div class="currentPlayerWords">
+                <a>Word:</a>
+                <div class="currentPlayerWordsCol"></div>
+            </div>
+            <div class="currentPlayerCount">
+                <a>Amount:</a>
+                <div class="currentPlayerCountCol"></div>
+            </div>
+            <div class="currentPlayerScore">
+                <a>Score:</a>
+                <div class="currentPlayerScoreCol"></div>
+            </div>
+        </div>
+        <table id="mainTable">
+            <tbody>
+            <div class="mainBoard" id="mainBoard">
+                <div class="cell">
+                </div>
+            </div>
+            <tbody>
+        </table>
+		<div class="winnerCol" ></div>
+    </div>
+    <div class="stockAndRare">
+        <div id="stockDialog" title="Stock Statistics:" style="white-space: pre-line; font-size: small; text-align: left; max-width: 30%" ></div>
+        <button type="button" id="showStockStat" onclick="getStockStat()"> Show Stock Statistics </button>
+
+        <div id="rareWords" title="10 Rare words:" style="white-space: pre-line; font-size: small; text-align: left; max-width: 100%" ></div>
+        <button type="button" id="showRareWords" onclick="getRareWords()"> Show 10 Rare words </button>
+    </div>
+</div>
+<!--<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.js"></script>-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" />
+<script type="text/javascript" src="gameRoom.js"></script>
+</body>
+</html>

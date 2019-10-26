@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Wordiada-Login</title>
+
+    <!-- Link the Bootstrap (from twitter) CSS framework in order to use its classes-->
+    <link rel="stylesheet" href="common/bootstrap.min.css">
+
+    <!-- Link jQuery JavaScript library in order to use the $ (jQuery) method-->
+    <!-- <script src="common/jquery-2.0.3.min.js"></script>-->
+    <!-- and\or any other scripts you might need to operate the JSP file behind the scene once it arrives to the client-->
+    <style>
+        body {
+            background: #ffffff url("/wordiada/images/welcomePage.gif") no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            background-color: lightgray; background-position: center;
+        }
+    </style>
+</head>
+<body style= "margin:200px -50px">
+<div style="height:500px; width:501px;margin: 200px -50px;position:relative;top:20%;left:45%; ">
+    <div class="container"; style="height:500px; width:501px";>
+        <br/>
+        <style>
+            h4 {
+                display: block;
+                font-size: 1.5em;
+                margin-top: 1.33em;
+                margin-bottom: 0.33em;
+                margin-left: 0;
+                margin-right: 0;
+                font-weight: bold;
+                color: rebeccapurple ;
+            }
+        </style>
+        <style>
+            h3 {
+                display: block;
+                font-size: 1.1em;
+                margin-top: 1.33em;
+                margin-bottom: 0.33em;
+                margin-left: 0;
+                margin-right: 0;
+                font-weight: bold;
+                color: rebeccapurple ;
+                display: inline-block;
+            }
+        </style>
+        <br><br><br><br>
+        <div style="background-color: #DCDCDC; border:1px solid black"; >
+            <h4>&emsp;&emsp;&emsp;Please enter a unique user name:</h4>
+            <form method="GET" action="pages/menu/MenuPage" style="margin: 0px 90px">
+                <input type="text" name="username" size="35" class=""/>
+                <br>
+                <h3>&emsp; &emsp;&emsp;A computer player? &emsp;</h3>
+                <input type="checkbox" name="isComputer" value="true" >
+                <br>
+                &emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="submit" value="Login"/>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
