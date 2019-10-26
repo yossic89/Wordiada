@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="397.0" prefWidth="597.0">
+         <children>
+            <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <fx:include source="top.fxml" />
+               </top>
+            </BorderPane>
+         </children></AnchorPane>
+  </content>
+</ScrollPane>
